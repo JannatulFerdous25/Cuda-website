@@ -1,0 +1,594 @@
+/* =============== */
+/* BASIC SETUP */
+/* =============== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Titillium Web', sans-serif;
+  text-rendering: optimizeLegibility;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  background: #ddd;
+}
+
+:focus {
+  outline: 0;
+}
+
+.row {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+.box {
+  padding: 1%;
+}
+
+section {
+  padding: 8rem 0;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  color: white;
+  text-decoration: none;
+  background: #eb7d4b;
+  padding: 1.5rem 7rem;
+  border-radius: .3rem;
+  margin-top: 1.5rem;
+  font-size: 1.8rem;
+  display: inline-block;
+}
+
+.description {
+  font-size: 1.8rem;
+  font-weight: 300;
+  width: 60%;
+  text-align: center;
+  margin-left: 20%;
+  margin-top: 2rem;
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 4rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  clear: both;
+  background: #14a58c;
+  width: 9rem;
+  height: .4rem;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* =============== */
+/* HOME SETUP */
+/* ===============*/
+header {
+  background: linear-gradient(rgba(135, 80, 156, 0.9), rgba(135, 80, 156, 0.9)), url("img/hero-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  height: 85vh;
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+
+.logo {
+  float: left;
+  width: auto;
+  height: 3rem;
+  font-size: 2.5rem;
+  margin-top: 3.5rem;
+}
+
+.menu {
+  float: right;
+  margin-top: 3.5rem;
+}
+
+.menu li {
+  display: inline-block;
+  margin: .5rem 1rem;
+}
+
+.menu li a:link,
+.menu li a:visited,
+.menu li a {
+  text-decoration: none;
+  color: #fff;
+  transition: .3s;
+  padding: .5rem 1rem;
+  font-weight: 300;
+  font-size: 1.6rem;
+  display: inline-block;
+}
+
+.menu li:hover a,
+.menu li .active {
+  background: #643a79;
+  border-radius: .3rem;
+}
+
+.mobile-menu span {
+  float: right;
+  font-size: 3rem;
+  margin-top: 1.5rem;
+  display: none;
+}
+
+.mobile-menu span:hover {
+  cursor: pointer;
+}
+
+.overlay {
+  width: 0;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1;
+  overflow-x: hidden;
+  transition: .5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 20%;
+  width: 100%;
+  text-align: center;
+}
+
+.overlay a {
+  text-decoration: none;
+  display: block;
+  font-size: 3rem;
+  letter-spacing: .3rem;
+  color: #999;
+  padding: 1rem 0;
+}
+
+.overlay a:hover {
+  color: #fff;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 2rem;
+  font-size: 6rem;
+  right: 4.5rem;
+}
+
+.sticky {
+  position: fixed;
+  background: rgba(135, 80, 156, 0.9);
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: .7rem 0;
+  box-shadow: 0 .3rem .5rem rgba(255, 255, 255, 0.5);
+  z-index: 9999;
+}
+
+.sticky .logo {
+  margin-top: .8rem;
+}
+
+.sticky .menu {
+  margin-top: 0;
+}
+
+.home-page {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 85rem;
+  text-align: center;
+}
+
+.home-page {
+  width: 100%;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 400;
+  width: 70%;
+  margin-left: 15%;
+}
+
+.btn-home {
+  border-bottom: .5rem solid #c86a40;
+}
+
+/* =============== */
+/* SERVICE_SECTION SETUP */
+/* ===============*/
+.service-section {
+  color: #fff;
+  background: linear-gradient(rgba(23, 194, 164, 0.9), rgba(23, 194, 164, 0.9)), url("img/services-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.service-section .icon {
+  height: 12rem;
+  margin-top: 4.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.service-section p {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+/* =============== */
+/* AUTHORS_SECTION SETUP */
+/* ===============*/
+.authors {
+  color: #3c4761;
+  background: linear-gradient(rgba(231, 241, 248, 0.8), rgba(231, 241, 248, 0.8)), url("img/team-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.authors h2::after {
+  background: #c8d9e5;
+}
+
+.authors img {
+  border-radius: 50%;
+  width: 20rem;
+  height: 20rem;
+  margin-top: 6rem;
+  margin-bottom: 4rem;
+}
+
+.authors .role {
+  text-align: center;
+  color: #30bae7;
+  font-size: 1.4rem;
+  margin-top: .5rem;
+}
+
+.authors h3 {
+  text-align: center;
+}
+
+.authors p {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-top: 1.5rem;
+}
+
+.social-media {
+  margin-top: 4.5rem;
+}
+
+.social-media li {
+  display: inline-block;
+  margin: .5rem;
+}
+
+.social-media li a {
+  color: #fff;
+}
+
+.social-media li a:link i::before {
+  text-align: center;
+  background: #bdd1df;
+  padding: 1rem;
+  display: inline-block;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  font-size: 2rem;
+  transition: .3s;
+}
+
+.social-media li a:hover i::before {
+  background: #393939;
+  transform: rotate(360deg);
+}
+
+/* =============== */
+/* SKILLS_SECTION SETUP */
+/* ===============*/
+
+/*External Progress bar SETUP */
+svg.radial-progress {
+  height: auto;
+  max-width: 200px;
+  padding: 1em;
+  transform: rotate(-90deg);
+  width: 100%;
+}
+
+svg.radial-progress circle {
+  fill: rgba(0,0,0,0);
+  stroke: #fff;
+  stroke-dashoffset: 219.91148575129;
+  stroke-width: 10;
+}
+
+svg.radial-progress circle.incomplete { opacity: 0.25; }
+
+svg.radial-progress circle.complete { stroke-dasharray: 219.91148575129; }
+
+svg.radial-progress text {
+  fill: #fff;
+  text-anchor: middle;
+}
+/* End Progress bar SETUP */
+
+.skills {
+  text-align: center;
+  color: #3c4761;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("img/skill-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.skills h2::after {
+  background: #dfe8ed;
+}
+
+.skills .box {
+  margin-top: 4.5rem;
+}
+
+svg.radial-progress circle {
+  stroke-width: 5;
+}
+
+svg.radial-progress text {
+  fill: #3c4761;
+  font-size: 1.5rem;
+}
+
+.skills svg.web-design circle {
+  stroke: #30bae7;
+}
+
+svg.html-css circle {
+  stroke: #d74680;
+}
+
+svg.graphics-design circle {
+  stroke: #15c7a8;
+}
+
+svg.ui-ux circle {
+  stroke: #eb7d4b;
+}
+
+/* =============== */
+/* PORTFOLIO_SECTION SETUP */
+/* ===============*/
+.portfolio {
+  text-align: center;
+  color: #393939;
+  background: linear-gradient(rgba(255, 221, 153, 0.9), rgba(255, 221, 153, 0.9)), url("img/portfolio-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.portfolio h2::after {
+  background: #ebc985;
+}
+
+.buttons {
+  margin: 4.5rem 0;
+}
+
+.buttons button {
+  padding: 1rem 2rem;
+  background: #ebc985;
+  border: 0;
+  margin: 0 .5rem;
+  border-radius: .5rem;
+  transition: .3s;
+  font-size: 1.6rem;
+}
+
+.buttons button:hover {
+  cursor: pointer;
+  box-shadow: inset 0 -.3rem .5rem rgba(60, 71, 97, 0.5);
+}
+
+.portfolio img {
+  width: 100%;
+  height: auto;
+}
+
+.port .col:nth-child(3) {
+  margin-left: 0;
+}
+
+.port p {
+  margin-top: 1.5rem;
+}
+
+.portfolio .mixitup-control-active {
+  border: 0;
+  background: #fff;
+}
+
+/* =============== */
+/* ABOUT US_SECTION SETUP */
+/* ===============*/
+.about-us {
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(rgba(215, 70, 128, 0.9), rgba(215, 70, 128, 0.9)), url("img/testimonial-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.about-us h2::after {
+  background: #b73c6d;
+}
+
+.about-us .col:nth-child(3) {
+  margin-left: 0;
+}
+
+.about {
+  margin-top: 7.5rem;
+  display: inline-block;
+}
+
+.about .col:nth-child(3),
+.about .col:nth-child(4) {
+  margin-top: 6rem;
+}
+
+.photo img {
+  height: 10rem;
+  border-radius: 50%;
+  margin-bottom: 3rem;
+}
+
+.photo {
+  width: 10rem;
+  float: left;
+}
+
+.review {
+  float: left;
+  width: 35rem;
+  text-align: justify;
+  margin-left: .5rem;
+}
+
+.review p {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.review span {
+  color: #ffdd99;
+}
+
+/* =============== */
+/* CONTACT US_SECTION SETUP */
+/* ===============*/
+.contact {
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(rgba(60, 84, 153, 0.9), rgba(60, 84, 153, 0.9)), url("img/contact-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.contact h2::after {
+  background: #273a71;
+}
+
+.contact .description {
+  margin-bottom: 7rem;
+  font-weight: 300;
+  width: 100%;
+  margin-left: 0;
+}
+
+.contact form {
+  width: 70%;
+  margin-left: 15%;
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+  padding: 1.5rem;
+  margin: .5rem 0;
+  background: #273a71;
+  border-radius: .5rem;
+  font-size: 1.8rem;
+  border: none;
+  color: #fff;
+  width: 100%;
+}
+
+.contact form ::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+.contact .btn-submit {
+  background: #30bae7;
+  border-bottom: .5rem solid #299ec5;
+  border: none;
+}
+
+/* =============== */
+/* FOOTER_SECTION SETUP */
+/* ===============*/
+.footer {
+  padding: 2.7rem 0;
+  border-top: .1rem solid rgba(255, 255, 255, 0.3);
+  background: #344b8e;
+  text-align: center;
+  width: 100%;
+}
+
+.footer ul li {
+  display: inline-block;
+  margin: 0 2rem;
+}
+
+.footer ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2.2rem;
+}
+
+.footer ul li:hover a {
+  color: #30bae7;
+}

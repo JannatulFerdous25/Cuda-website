@@ -1,0 +1,105 @@
+@media only screen and (max-width: 1200px){
+  header{
+    height:75vh;
+  }
+
+  .row{
+    margin:0 15px;
+  }
+  section {
+  padding: 8rem 3.7rem;
+  }
+}
+@media only screen and (max-width: 1024px)  {
+
+    .menu{
+      display: none;
+    }
+    .mobile-menu span{
+      display: block;
+    }
+    html{
+      font-size:57.5%;
+    }
+
+    .home-page {
+      width:90%;
+
+    }
+    .photo{
+      width:100%;
+      float:none;
+      text-align: center;
+    }
+    .photo img{
+      height:13rem;
+    }
+    .review{
+      width:90%;
+      text-align: center;
+      float:none;
+    }
+    .contact form{
+      width:100%;
+      margin-left:0;
+    }
+}
+@media only screen and (max-width: 980px){
+  .span_1_of_4 {
+	  width: 49.2%;
+  }
+  .span_1_of_4:nth-child(3){
+    margin-left:0;
+  }
+  html{
+    font-size:62.5%;
+  }
+  .footer ul li{
+  margin: 0 1.5rem;
+  }
+
+}
+@media only screen and (max-width: 768px){
+  h1{
+    font-size:3.5rem;
+  }
+  h2{
+    font-size:3rem;
+  }
+  h3{
+    font-size:2rem;
+  }
+  .description{
+    width:90%;
+    margin-left:5%;
+  }
+  .footer ul li a {
+      font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 480px){
+  .span_1_of_4 {
+    width: 100%;
+  }
+  header{
+    height:70vh;
+  }
+  .about .col:nth-child(3),
+  .about .col:nth-child(4) {
+    margin-top: 4rem;
+  }
+  .about .col:nth-child(1),
+  .about .col:nth-child(2) {
+    margin-top: 4rem;
+  }
+  h1{
+    font-size:3rem;
+  }
+  h2{
+    font-size:2.5rem;
+  }
+  h3{
+    font-size:2rem;
+  }
+
+}
